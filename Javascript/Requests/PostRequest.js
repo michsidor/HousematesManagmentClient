@@ -1,3 +1,5 @@
+const userId = localStorage.getItem("id");
+
 window.onload = async function(){
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
@@ -53,7 +55,8 @@ const formAssignmentAndAdvertisementFunction = (url,form,Id) => {
 
 const ObjectEdit = async(url,body) => {
     await PostMethod(url,body);
-    window.location.href='/HTML/HousematesManagment.html'
+    debugger;
+    window.location.href='/HTML/HousematesManagment.html?id='+userId;
 }
 
 const PostMethod = async(url,body) => {

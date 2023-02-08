@@ -1,5 +1,8 @@
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+localStorage.setItem("id", id);
 const PaymentsGet = async() => {
-    const url = 'https://localhost:7021/api/payment'
+    const url = 'https://localhost:7021/api/payment/all/'+JSON.parse(id);
 
     let result = await GetMethod(url);
 
@@ -7,7 +10,7 @@ const PaymentsGet = async() => {
 }
 
 const AdvertisementsGet = async() => {
-    const url = 'https://localhost:7021/api/advertisement'
+    const url = 'https://localhost:7021/api/advertisement/all/'+JSON.parse(id);
 
     let result = await GetMethod(url);
 
@@ -15,7 +18,7 @@ const AdvertisementsGet = async() => {
 }
 
 const AssignmentsGet = async() => {
-    const url = 'https://localhost:7021/api/assignment'
+    const url = 'https://localhost:7021/api/assignment/all/'+JSON.parse(id);
 
     let result = await GetMethod(url);
 
