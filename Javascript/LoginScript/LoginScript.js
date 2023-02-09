@@ -21,8 +21,14 @@ const UserFormFunction = (form) =>{
             Login,
             Password
         };
-        const result = await PostUserRequest(body,'https://localhost:7021/api/user');
-        window.location.href = "/HTML/HousematesManagment.html?id=" + JSON.stringify(result);
+
+        try{
+            const result = await PostUserRequest(body,'https://localhost:7021/api/user');
+            window.location.href = "/HTML/HousematesManagment.html?id=" + JSON.stringify(result);       
+        }
+        catch(error){
+            console.error(error);
+        }
     });
 }
 
@@ -35,8 +41,14 @@ const FamilyFormFunction = (form) =>{
             Id,
             Name
         };
-        await PostFamilyRequest(body,"https://localhost:7021/api/family/" + JSON.parse(userId));
-        window.location.href = "/HTML/HousematesManagment.html?id=" + userId;
+        try{
+            await PostFamilyRequest(body,"https://localhost:7021/api/family/" + JSON.parse(userId));
+            window.location.href = "/HTML/HousematesManagment.html?id=" + userId;
+        }
+        catch(error){
+            console.error(error);
+        }
+
     });
 }
 

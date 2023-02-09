@@ -36,10 +36,14 @@ const formPaymentFunction = (url,form) => {
           Deadline,
           DebtorsMetadata
         };
-
-        await ObjectAdd(url, formData).then(() => {
-            window.location.href='/HTML/HousematesManagment.html?id='+userId;
-        });
+        try{
+            await ObjectAdd(url, formData).then(() => {
+                window.location.href='/HTML/HousematesManagment.html?id='+userId;
+            });
+        }
+        catch(error){
+            console.log(error);
+        }
     });
 }
 
@@ -56,10 +60,14 @@ const formAssignmentAndAdvertisementFunction = (url,form) => {
             Comments,
             Status
         };
-
-        await ObjectAdd(url, formData).then(() => {
-            window.location.href='/HTML/HousematesManagment.html?id='+userId;
-        });
+        try{
+            await ObjectAdd(url, formData).then(() => {
+                window.location.href='/HTML/HousematesManagment.html?id='+userId;
+            });
+        }
+        catch(error){
+            console.log(error);
+        }
     });
 }
 
@@ -82,9 +90,14 @@ const formUserFunction = (url,form) => {
             Birthday,
             Gender
         };
-        await ObjectAdd(url, formData).then(() => {
-            window.location.href='/HTML/LoginModel/LoginUserView.html'
-        });
+        try{
+            await ObjectAdd(url, formData).then(() => {
+                window.location.href='/HTML/LoginModel/LoginUserView.html'
+            });
+        }
+        catch(error){
+            console.log(error);
+        }
     });
 }
 
@@ -96,14 +109,24 @@ const formFamilyFunction = async(url,form) => {
         const formData = {
             Name
         }
-        await ObjectAdd(url, formData).then(() => {
-            window.location.href='/HTML/HousematesManagment.html?id='+userId;
-        });
+        try{
+            await ObjectAdd(url, formData).then(() => {
+                window.location.href='/HTML/HousematesManagment.html?id='+userId;
+            });
+        }
+        catch(error){
+            console.error(error);
+        }
     })
 }
 
 const ObjectAdd = async(url,body) => {
-    await PutMethod(url,body);
+    try{
+        await PutMethod(url,body);
+    }
+    catch(error){
+        console.error(error);
+    }
 }
 
 const PutMethod = async(url,body) => {
@@ -114,4 +137,8 @@ const PutMethod = async(url,body) => {
         },
         body: JSON.stringify(body)
     });
+
+    if(!response.ok){
+        throw new Error(`Request failed with status code:${response.status}`)
+    }
 }

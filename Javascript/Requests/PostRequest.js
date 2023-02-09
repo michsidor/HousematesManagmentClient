@@ -29,8 +29,13 @@ const formPaymentFunction = (url,form,Id) => {
             Deadline,
             DebtorsMetadata
         };
-        debugger;
-        await ObjectEdit(url, formData);
+        
+        try{
+            await ObjectEdit(url, formData);
+        }
+        catch(error){
+            console.error(error);
+        }
     });
 }
 
@@ -48,22 +53,35 @@ const formAssignmentAndAdvertisementFunction = (url,form,Id) => {
             Comments,
             Status
         };
-
-        await ObjectEdit(url, formData);
+        try{
+            await ObjectEdit(url, formData);
+        }
+        catch(error){
+            console.error(error);
+        }
     });
 }
 
 const ObjectEdit = async(url,body) => {
-    await PostMethod(url,body);
-    window.location.href='/HTML/HousematesManagment.html?id='+userId;
+    try{
+        await PostMethod(url,body);
+        window.location.href='/HTML/HousematesManagment.html?id='+userId;
+    }
+    catch(error){
+        console.error(error);
+    }
 }
 
 const PostMethod = async(url,body) => {
-    const reposne = await fetch(url,{
+    const response = await fetch(url,{
          method:"POST",
          headers: {
             "Content-Type": "application/json;charset=utf-8"
         },
         body: JSON.stringify(body)
     });
+
+    if(!response.ok){
+        throw new Error(`Request failed with status code:${response.status}`)
+    }
 }
