@@ -6,7 +6,6 @@ window.onload = async function(){
     const formAssignment = document.getElementById("addingAssignment");
     const formUser = document.getElementById("userRegister");
     const formFamily = document.getElementById("addingFamily");
-    debugger;
 
     if(formPayment != null){
         formPaymentFunction("https://localhost:7021/api/payment/"+JSON.parse(userId),formPayment);

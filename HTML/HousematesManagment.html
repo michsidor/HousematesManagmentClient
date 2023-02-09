@@ -6,30 +6,50 @@
 
 <html>
     <body>
-        <div class="textCenter">
-            <h1>See whats new in your family</h1>
-            <input type="button" class="myMargin" onclick="PaymentsGet()" value="See payments in my family">
-                </br>
-            <input type="button" class="myMargin" onclick="AdvertisementsGet()" value="See advertisements in my family">
-                </br>
-            <input type="button" class="myMargin" onclick="AssignmentsGet()" value="See assignements of my family">
-            <h1>Adding new models</h1>
-            <form action="./InputModels/AddingNewAdvertisement.html">
-                <input type="submit" class="myMargin" value="Add new advertisement" />
-            </form>
-            <form action="./InputModels/AddingNewAssignment.html">
-                <input type="submit" class="myMargin" value="Add new assignment" />
-            </form>
-            <form action="./InputModels/AddingNewPayment.html">
-                <input type="submit" class="myMargin" value="Add new payment" />
-            </form>
-            <h1>If you are not in family join now or create new one</h1>
-            <form action="./InputModels/AddingNewFamily.html">
-                <input type="submit" class="myMargin" value="Create new family" />
-            </form>
-            <form action="./LoginModel/LoginFamilyView.html">
-                <input type="submit" class="myMargin" value="Join to family" />
-            </form>
-        </div>
+        <img src="/Images/family.jpg"  alt="Girl in a jacket" style="display:block; margin:auto; margin-top: 100px; width:600px; height:400px;">
+
+
+        <ul class="navbar">
+            <li class="active"><a >Housmates Managment</a></li>
+            <li><a href="#home" onclick="PaymentsGet()">Payments</a></li>
+            <li><a href="#news" onclick="AdvertisementsGet()">Advertisement</a></li>
+            <li><a href="#contact" onclick="AssignmentsGet()">Assignments</a></li>
+        </ul>
+
+
+        <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+            <div style="flex: 1; text-align: left; width: 200px; margin: auto; text-align: center; font-family: Lucida Handwriting">
+                <h1 class="textFont">News in your family</h1>
+                <input type="button" class="mb" onclick="PaymentsGet()" value="Payments">
+                    </br>
+                <input type="button" class="mb" onclick="AdvertisementsGet()" value="Advertisements">
+                    </br>
+                <input type="button" class="mb" onclick="AssignmentsGet()" value="Assignements">
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <h1 class="textFont">Adding new models</h1>
+                <form action="./InputModels/AddingNewAdvertisement.html">
+                    <input type="submit" class="mb" value="Add new advertisement" />
+                </form>
+                <form action="./InputModels/AddingNewAssignment.html">
+                    <input type="submit" class="mb" value="Add new assignment" />
+                </form>
+                <form action="./InputModels/AddingNewPayment.html">
+                    <input type="submit" class="mb" value="Add new payment" />
+                </form>
+            </div>
+            <div style="flex: 1; text-align: right; width: 300px; margin: auto; text-align: center;">
+                <h1 class="textFont">Family Options</h1>
+                <form action="./InputModels/AddingNewFamily.html">
+                    <input type="submit" class="mb" value="Create new family" />
+                </form>
+                <form action="./LoginModel/LoginFamilyView.html">
+                    <input type="submit" class="mb" value="Join to family" />
+                </form>
+                <form action="./LoginModel/LoginFamilyView.html">
+                    <input type="submit" class="mb" value="Quit family" />
+                </form>
+            </div>
+          </div>
     </body>
 </html>
