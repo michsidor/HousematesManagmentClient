@@ -55,7 +55,6 @@ const formAssignmentAndAdvertisementFunction = (url,form,Id) => {
 
 const ObjectEdit = async(url,body) => {
     await PostMethod(url,body);
-    debugger;
     window.location.href='/HTML/HousematesManagment.html?id='+userId;
 }
 

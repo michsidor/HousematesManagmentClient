@@ -5,6 +5,8 @@ window.onload = async function(){
     const formAdvertisement = document.getElementById("addingAdvertisement");
     const formAssignment = document.getElementById("addingAssignment");
     const formUser = document.getElementById("userRegister");
+    const formFamily = document.getElementById("addingFamily");
+    debugger;
 
     if(formPayment != null){
         formPaymentFunction("https://localhost:7021/api/payment/"+JSON.parse(userId),formPayment);
@@ -17,6 +19,9 @@ window.onload = async function(){
     }
     else if(formUser != null){
         formUserFunction("https://localhost:7021/api/user",formUser);
+    }
+    else if(formFamily != null){
+        formFamilyFunction("https://localhost:7021/api/family/" + JSON.parse(userId), formFamily)
     }
 }
 
@@ -33,7 +38,6 @@ const formPaymentFunction = (url,form) => {
         };
 
         await ObjectAdd(url, formData).then(() => {
-            debugger;
             window.location.href='/HTML/HousematesManagment.html?id='+userId;
         });
     });
@@ -78,11 +82,24 @@ const formUserFunction = (url,form) => {
             Birthday,
             Gender
         };
-        debugger;
         await ObjectAdd(url, formData).then(() => {
-            window.location.href='/HTML/LoginModel/LoginView.html'
+            window.location.href='/HTML/LoginModel/LoginUserView.html'
         });
     });
+}
+
+const formFamilyFunction = async(url,form) => {
+    form.addEventListener("submit", async(event) =>{
+        event.preventDefault();
+        const Name = form.elements.name.value;
+        debugger;
+        const formData = {
+            Name
+        }
+        await ObjectAdd(url, formData).then(() => {
+            window.location.href='/HTML/HousematesManagment.html?id='+userId;
+        });
+    })
 }
 
 const ObjectAdd = async(url,body) => {
