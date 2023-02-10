@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <head>
-    <script type="text/Javascript" src="/Javascript/Requests/GetRequests.js"></script>
     <link rel="stylesheet" href="../CSS/stylesheet.css">
+    <script type="text/Javascript" src="/Javascript/Requests/GetRequests.js"></script>
 </head>
 
 <html>
     <body>
-        <img src="/Images/family.jpg"  alt="Girl in a jacket" style="display:block; margin:auto; margin-top: 100px; width:600px; height:400px;">
-
-
+        <img src="/Images/family.jpg"  alt="Girl in a jacket" class="familyImage">
         <ul class="navbar">
             <li class="active"><a >Housmates Managment</a></li>
             <li><a href="#home" onclick="PaymentsGet()">Payments</a></li>
             <li><a href="#news" onclick="AdvertisementsGet()">Advertisement</a></li>
             <li><a href="#contact" onclick="AssignmentsGet()">Assignments</a></li>
         </ul>
-
-
-        <div style="display: flex; justify-content: space-between; margin-top: 30px;">
-            <div style="flex: 1; text-align: left; width: 200px; margin: auto; text-align: center; font-family: Lucida Handwriting">
+        <div class="justifyContent">
+            <div class="justifyLeft">
                 <h1 class="textFont">News in your family</h1>
                 <input type="button" class="mb" onclick="PaymentsGet()" value="Payments">
                     </br>
@@ -26,7 +22,7 @@
                     </br>
                 <input type="button" class="mb" onclick="AssignmentsGet()" value="Assignements">
             </div>
-            <div style="flex: 1; text-align: center;">
+            <div class="justifyCenter">
                 <h1 class="textFont">Adding new models</h1>
                 <form action="./InputModels/AddingNewAdvertisement.html">
                     <input type="submit" class="mb" value="Add new advertisement" />
@@ -38,7 +34,7 @@
                     <input type="submit" class="mb" value="Add new payment" />
                 </form>
             </div>
-            <div style="flex: 1; text-align: right; width: 300px; margin: auto; text-align: center;">
+            <div class="justifyRight">
                 <h1 class="textFont">Family Options</h1>
                 <form action="./InputModels/AddingNewFamily.html">
                     <input type="submit" class="mb" value="Create new family" />

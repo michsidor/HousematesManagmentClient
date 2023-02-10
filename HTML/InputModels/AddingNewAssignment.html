@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="/CSS/stylesheet.css">
+    <link rel="stylesheet" href="/CSS/formstylesheet.css">
     <script  src="/Javascript/Requests/PutRequest.js"></script>
 </head>
 <html>
 <body>
-
-<h1>Add new assignment</h1>
-<form id="addingAssignment">
-    <div class="myMargin">
-        <label for="title">Enter title</label>
-        <input id="title" name="title" type="text"><br>
-    </div>
-    <div class="myMargin">
-        <label for="description">Enter description</label>
-        <input id="description" name="description" type="text"><br>       
-    </div>
-    <div class="myMargin">
-        <label for="comments">Enter comment</label>
-        <input id="comments" name="comments" type="text"><br>        
-    </div>
+<ul class="navbar">
+    <li class="active"><a>Housmates Managment</a></li>
+</ul>
+<form id="addingAssignment" class="myForm">
+    <img src="/Images/family.jpg"  alt="Girl in a jacket" class="familyImageThree">
+    <label for="title" class="textFont">Enter title</label>
+    <input id="title" name="title" type="text"><br>
+    <label for="description" class="textFont">Enter description</label>
+    <input id="description" name="description" type="text"><br>       
+    <label for="comments" class="textFont">Enter comment</label>
+    <input id="comments" name="comments" type="text"><br>        
     <input type="submit" value="Add">
 </form>
-
 </body>
 </html>

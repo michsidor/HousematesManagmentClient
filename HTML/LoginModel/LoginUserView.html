@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="/CSS/stylesheet.css">
+    <link rel="stylesheet" href="/CSS/formstylesheet.css">
     <script  src="/Javascript/LoginScript/LoginScript.js"></script></head>
 <html>
     <body>
-        <div class="textCenter">
-            <h1>Login to system</h1>
-            <form id="loginUser">
-                <div class="myMargin">
-                    <label for="login">Enter login</labelp>
-                    <input id="login" name="login" type="text"><br>
-                </div>
-                <div class="myMargin">
-                    <label for="password">Enter password</label>
-                    <input id="password" name="password" type="text"><br>       
-                </div>
-                <input type="submit" value="Login">
-            </form>
-        </div>
+        <ul class="navbar">
+            <li class="active"><a>Housmates Managment</a></li>
+        </ul>
+        <form id="loginUser" class="myForm">
+            <img src="/Images/family.jpg"  alt="Girl in a jacket" class="familyImage">
+            <label for="login" class="textFont">Enter login</label>
+            <input id="login" name="login" type="text"><br>
+            <label for="password" class="textFont">Enter password</label>
+            <input id="password" name="password" type="text"><br>       
+            <input type="submit" value="Login">
+        </form>
     </body>
 </html>

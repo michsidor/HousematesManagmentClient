@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="/CSS/stylesheet.css">
+    <link rel="stylesheet" href="/CSS/formstylesheet.css">
     <script  src="/Javascript/Requests/PostRequest.js"></script>
 </head>
 <html>
 <body>
-
-<h1>Edit payment</h1>
-<form id="editPayment">
-    <div class="myMargin">
-        <label for="amount">Enter amount</label>
-        <input id="amount" name="amount" type="number"><br>
-    </div>
-    <div class="myMargin">
-        <label for="deadline">Enter deadline of payment</label>
-        <input id="deadline" name="deadline" type="date"><br>       
-    </div>
-    <div class="myMargin">
-        <label for="debtors">Enter names of debtors</label>
-        <input id="debtors" name="debtors" type="text"><br>        
-    </div>
+<ul class="navbar">
+    <li class="active"><a>Housmates Managment</a></li>
+</ul>
+<form id="editPayment" class="myForm">
+    <img src="/Images/family.jpg"  alt="Girl in a jacket" class="familyImageThree">
+    <label for="amount" class="textFont">Enter amount</label><br>
+    <input id="amount" name="amount" type="number"><br>
+    <label for="deadline" class="textFont">Enter deadline of payment</label>
+    <input id="deadline" name="deadline" type="date"><br>       
+    <label for="debtors" class="textFont">Enter names of debtors</label>
+    <input id="debtors" name="debtors" type="text"><br>        
     <input type="submit" value="Edit">
 </form>
-
 </body>
 </html>

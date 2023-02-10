@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="/CSS/stylesheet.css">
+    <link rel="stylesheet" href="/CSS/formstylesheet.css">
     <script  src="/Javascript/LoginScript/LoginScript.js"></script>
 </head>
 <html>
 <body>
-<h1>Add new assignment</h1>
-<form id="loginFamily">
-    <div class="myMargin">
-        <label for="name">Family name</label>
-        <input id="name" name="name" type="text"><br>
-    </div>
-    <div class="myMargin">
-        <label for="id">Family id</label>
-        <input id="id" name="id" type="text"><br>
-    </div>
+<ul class="navbar">
+    <li class="active"><a>Housmates Managment</a></li>
+</ul>
+<form id="loginFamily" class="myForm">
+    <img src="/Images/family.jpg"  alt="Girl in a jacket" class="familyImage">
+    <label for="name" class="textFont">Family name</label>
+    <input id="name" name="name" type="text"><br>
+    <label for="id" class="textFont">Family id</label>
+    <input id="id" name="id" type="text"><br>
     <input type="submit" value="Add">
 </form>
 </body>

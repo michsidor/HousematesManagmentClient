@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <head>
 </head>
-<link rel="stylesheet" href="/CSS/stylesheet.css">
+<link rel="stylesheet" href="/CSS/formstylesheet.css">
 <script  src="/Javascript/Requests/PutRequest.js"></script>
 <html>
     <body>
-        <div class="myMargin">
-            <h1>Register to system</h1>
-            <form id="userRegister">
-                <div class="myMargin">
-                    <label for="name">Enter first name</label>
-                    <input id="name" name="name" type="text"><br>
-                    <label for="secondname">Enter second name</label>
-                    <input id="secondname" name="secondname" type="text"><br>
-                    <label for="login">Enter login</label>
-                    <input id="login" name="login" type="text"><br>   
-                    <label for="password">Enter password</label>
-                    <input id="password" name="password" type="text"><br>   
-                    <label for="email">Enter email</label>
-                    <input id="email" name="email" type="text"><br>  
-                    <label for="birthday">Enter birthday</label>
-                    <input id="birthday" name="birthday" type="date"><br>  
-                    <label for="gender">Enter gender [Man/Woman]</label>
-                    <input id="gender" name="gender" type="text"><br>  
-                </div>
-                <input type="submit" value="Login">
-            </form>
-        </div>
+        <ul class="navbar">
+            <li class="active"><a>Housmates Managment</a></li>
+        </ul>
+         <form id="userRegister" class="myForm">
+            <img src="/Images/family.jpg"  alt="Girl in a jacket" class="familyImageTwo">
+            <label for="name" class="textFont">Enter first name</label>
+            <input id="name" name="name" type="text"><br>
+            <label for="secondname" class="textFont">Enter second name</label>
+            <input id="secondname" name="secondname" type="text"><br>
+            <label for="login" class="textFont">Enter login</label>
+            <input id="login" name="login" type="text"><br>   
+            <label for="password" class="textFont">Enter password</label>
+            <input id="password" name="password" type="text"><br>   
+            <label for="email" class="textFont">Enter email</label>
+            <input id="email" name="email" type="text"><br>  
+            <label for="birthday" class="textFont">Enter birthday</label>
+            <input id="birthday" name="birthday" type="date"><br>  
+            <label for="gender" class="textFont">Enter gender [Man/Woman]</label>
+            <input id="gender" name="gender" type="text"><br>  
+            <input type="submit" value="Login">
+        </form>
     </body>
 </html>

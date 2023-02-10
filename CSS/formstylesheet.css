@@ -1,0 +1,134 @@
+.textFont{
+    font-family: "Lucida Handwriting",  cursive;
+    font-size: 30px;
+    color: #04AA6D;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.myForm{
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    border: 0;
+
+}
+
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: "Lucida Handwriting",  cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+  
+li{
+    color: rgb(255, 255, 255);
+    float: left;
+    background-color: #04AA6D;
+
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}   
+
+.familyImage{
+    display:block; 
+    margin:auto;  
+    width:600px; 
+    height:400px;
+}
+
+.familyImageTwo{
+    display:block; 
+    width:400px; 
+    height:300px;
+    margin:auto;
+    margin-top: 400px;  
+}
+
+.familyImageThree{
+    display:block; 
+    width:600px; 
+    height:400px;
+    margin:auto;
+    margin-top: 100px;  
+}
+
+input[type=text] ,input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .mb {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  /* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+input[type="date"], focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
