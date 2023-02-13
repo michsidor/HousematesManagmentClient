@@ -1,8 +1,24 @@
 window.onload = function() {
   const urlParams = new URLSearchParams(window.location.search);
-  const data = JSON.parse(urlParams.get("data"));
-
-  const resultHTML = data.map(item => 
+  const actualWindow = window.location.href;
+  if(actualWindow.includes("?data")){
+    const data = JSON.parse(urlParams.get("data"));
+    const resultHTML = data.map(item => 
+      "<table class='styled-table'>" + 
+      "<thead><tr><th>Title</th><th>Description</th><th>Comments</th></tr></thead>"+
+      "<tbody>"+
+      "<tr class='active-row'>" + 
+      "<td>" + item.Title + "</td>" +
+      "<td>" + item.Description + "</td>" + 
+      "<td>" + item.Comments + "</td>" + 
+      "</tr>").join("") + 
+  "</table>";
+  console.log(data);
+  document.getElementById("result").innerHTML = resultHTML;
+  }
+  else if(actualWindow.includes("?myData")){
+    const data = JSON.parse(urlParams.get("myData"));
+    const resultHTML = data.map(item => 
       "<table class='styled-table'>" + 
       "<thead><tr><th>Title</th><th>Description</th><th>Comments</th></tr></thead>"+
       "<tbody>"+
@@ -17,8 +33,8 @@ window.onload = function() {
       "</tr>").join("") + 
   "</table>";
   console.log(data);
-
   document.getElementById("result").innerHTML = resultHTML;
+  }
 };
 
 function ObjectEdit(Id){
