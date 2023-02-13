@@ -62,6 +62,16 @@ const formAssignmentAndAdvertisementFunction = (url,form,Id) => {
     });
 }
 
+const QuitFamily = async() => {
+    try{
+        await PostMethodDelete("https://localhost:7021/api/advertisement/"+JSON.parse(userId));
+        window.location.href='/HTML/HousematesManagment.html?id='+userId;
+    }
+    catch(error){
+        console.error(error);
+    }
+}
+
 const ObjectEdit = async(url,body) => {
     try{
         await PostMethod(url,body);
@@ -81,6 +91,17 @@ const PostMethod = async(url,body) => {
         body: JSON.stringify(body)
     });
 
+    if(!response.ok){
+        throw new Error(`Request failed with status code:${response.status}`)
+    }
+}
+
+const PostMethodDelete = async(url) => {
+    const response = await fetch(url,{
+         method:"POST",
+         headers: {
+            "Content-Type": "application/json;charset=utf-8"
+         }});
     if(!response.ok){
         throw new Error(`Request failed with status code:${response.status}`)
     }
